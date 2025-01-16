@@ -3,6 +3,7 @@ package ladder.domain;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Participants {
     private List<Participant> participants = new ArrayList<>();
@@ -15,7 +16,7 @@ public class Participants {
         checkValidation(names.length);
 
         Arrays.stream(names)
-                .forEach(name -> this.participants.add(new Participant(name)));
+                .forEach(name -> this.participants.add(new Participant(name.strip())));
     }
 
     public Participants(List<Participant> participants) {
@@ -35,5 +36,11 @@ public class Participants {
 
     public List<Participant> getParticipants() {
         return participants;
+    }
+
+    public List<String> getNames() {
+        return participants.stream()
+                .map(Participant::getName)
+                .collect(Collectors.toList());
     }
 }

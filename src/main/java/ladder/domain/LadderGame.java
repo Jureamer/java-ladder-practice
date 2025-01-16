@@ -16,5 +16,6 @@ public class LadderGame {
         Participants participants = inputView.getParticipants();
         Ladder ladder = inputView.getLadder(participants.size());
         ladder.createLines();
+        resultView.printLadder(ladder, participants);
     }
 }

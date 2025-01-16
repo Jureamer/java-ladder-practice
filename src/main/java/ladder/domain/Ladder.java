@@ -1,6 +1,7 @@
 package ladder.domain;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.stream.IntStream;
 
@@ -24,5 +25,9 @@ public class Ladder {
 
     public void createLines() {
         heights.forEach(Height::createLines);
+    }
+
+    public List<Height> getHeights() {
+        return heights;
     }
 }
