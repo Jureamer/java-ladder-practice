@@ -31,4 +31,10 @@ public class LadderTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessage("사다리 높이는 2 이상 10 이하만 가능합니다.");
     }
+
+    void 사다리_출발점을_입력받으면_도착점을_반환한다() {
+        Ladder ladder = new Ladder(5, 4);
+        ladder.createLines();
+        assertThat(ladder.getResultIndex(0)).isEqualTo(1);
+    }
 }
