@@ -35,6 +35,6 @@ public class LadderTest {
     void 사다리_출발점을_입력받으면_도착점을_반환한다() {
         Ladder ladder = new Ladder(5, 4);
         ladder.createLines();
-        assertThat(ladder.getResultIndex(0)).isEqualTo(1);
+        assertThat(ladder.getEndIndex(0)).isEqualTo(1);
     }
 }

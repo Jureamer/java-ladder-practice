@@ -37,9 +37,9 @@ public class PlayerResultTest {
 
     @Test
     void 이름과_결과를_모두_조회한다() {
-        assertThat(playerResult.getParticipantResults()).hasSize(3);
-        assertThat(playerResult.getParticipantResults().get(0).getName()).isEqualTo("pobi");
-        assertThat(playerResult.getParticipantResults().get(0).getResult()).isEqualTo("꽝");
-        assertThat(playerResult.getParticipantResults().get(1).getName()).isEqualTo("crong");
+        assertThat(playerResult.getPlayerResult()).hasSize(3);
+        assertThat(playerResult.getPlayerResult().get(0).getName()).isEqualTo("pobi");
+        assertThat(playerResult.getPlayerResult().get(0).getResult()).isEqualTo("꽝");
+        assertThat(playerResult.getPlayerResult().get(1).getName()).isEqualTo("crong");
     }
 }

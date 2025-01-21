@@ -30,5 +30,18 @@ public class Ladder {
         return heights;
     }
 
+    public int getEndIndex(int index) {
+        int currentIndex = index;
 
-}
+        for (Height height : heights) {
+            if (currentIndex > 0 && height.isMovableByIndex(currentIndex - 1)) {
+                currentIndex--;
+            } else if (height.isMovableByIndex(currentIndex)) {
+                currentIndex++;
+            }
+        }
+        return currentIndex;
+        }
+    }
+
+

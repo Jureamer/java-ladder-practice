@@ -1,6 +1,7 @@
 package ladder.domain;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PlayerResult {
@@ -19,6 +20,10 @@ public class PlayerResult {
     }
 
     public List<ResultForParticipant> getParticipantResults() {
+        return results;
+    }
+
+    public List<ResultForParticipant> getPlayerResult() {
         return results;
     }
 }

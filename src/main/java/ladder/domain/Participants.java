@@ -43,4 +43,8 @@ public class Participants {
                 .map(Participant::getName)
                 .collect(Collectors.toList());
     }
+
+    public String getNameByIndex(int index) {
+        return participants.get(index).getName();
+    }
 }

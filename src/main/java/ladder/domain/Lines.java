@@ -13,11 +13,6 @@ public class Lines {
                 .forEach(i -> lines.add(new Line()));
     }
 
-    public Lines(List<Line> lines) {
-        this.lines = lines;
-    }
-
-
     public List<Line> getLines() {
         return lines;
     }

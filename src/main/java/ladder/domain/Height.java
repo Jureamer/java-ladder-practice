@@ -15,21 +15,21 @@ public class Height {
         this.lines = new Lines(countOfParticipant);
     }
 
-    public void createLines () {
+    public void createLines() {
         Random random = new Random();
         IntStream.range(0, lines.size())
-            .forEach(i -> {
-                if (random.nextBoolean() && lines.drawable(i)) {
-                    lines.drawLine(i);
-                }
-            });
-    }
-
-    public Lines getLines() {
-        return lines;
+                .forEach(i -> {
+                    if (random.nextBoolean() && lines.drawable(i)) {
+                        lines.drawLine(i);
+                    }
+                });
     }
 
     public List<Line> getDrawLines() {
         return lines.getLines();
+    }
+
+    public boolean isMovableByIndex(int index) {
+        return lines.getLine(index).isRight();
     }
 }
